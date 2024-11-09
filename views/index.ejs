@@ -8,8 +8,8 @@
 </head>
 <body>
     <header>
-        <a href="http://localhost:8080/"><h1>EasyNote</h1></a>
-        <a href="http://localhost:8080/posts/new"><button class="btn">New Note</button></a>
+        <a href="/"><h1>EasyNote</h1></a>
+        <a href="/new"><button class="btn">New Note</button></a>
     </header>
     
     <div class="allPosts">
@@ -19,8 +19,8 @@
                 <h4 class="date"> <%= post.date %> </h4>
                 <h4 class="content"> <%= post.content %> </h4>
                 <div class="btns">
-                    <a href="http://localhost:8080/posts/<%= post.id %>"><button class="btn">View</button></a>
-                    <a href="http://localhost:8080/posts/<%= post.id %>/edit"><button class="btn">Edit</button></a>
+                    <a href="/posts/<%= post.id %>"><button class="btn">View</button></a>
+                    <a href="/posts/<%= post.id %>/edit"><button class="btn">Edit</button></a>
                     <form method="post" action="/posts/<%= post.id %>?_method=DELETE">
                         <button class="btn">Delete</button>
                     </form>
